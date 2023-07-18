@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #00ca7a;
+    --alt-color: #494b48;
+    --background-color: #3b3d3a; 
+    --text-color: rgb(177, 169, 169);
+}
+.my-button {
+    background-color: var(--alt-color) !important;
+    width: fit-content;
+    margin: 0 auto;
+    transition: .3s;
+}
+.my-button:hover {
+    background-color: white !important;
+    color: black !important;
+}
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin: 50px 0;
+}
+.title span {
+    color: var(--main-color);
+}
+body {
+    background-color: var(--background-color) !important;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: var(--alt-color);
+}
+header .container {
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    color: white;
+    font-size: 26px;
+}
+header ul {
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    transition: .3s;
+}
+header ul li a:hover {
+    color: var(--main-color);
+}
+
+/* Main*/
+main {
+    height: calc(100vh - 72px);
+}
+main .container {
+    justify-content: space-between;
+    height: 100%;
+}
+main .container div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+main h2 p {
+    font-size: 70px;
+    color: var(--main-color);
+}
+
+main .image {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+main img {
+    width: 400px;
+}
+@media (max-width: 768px) {
+    main .container {
+        flex-direction: column;
+    }
+    main .text {
+        width: fit-content;
+        margin: 40px auto 100px;
+    }
+    main {
+        height: fit-content;
+    }
+}
+@media (max-width: 600px) {
+    
+    main h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+    }
+    main h2 p {
+        font-size: 40px;
+        color: var(--main-color);
+    }
+    
+}
+/* Main*/
+
+/* Cards*/
+.cards .card-item {
+    background-color: var(--alt-color);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+.cards .card-item i {
+    color: var(--main-color);
+    font-size: 40px;
+}
+.cards .card-item p {
+    margin-bottom: -10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cards .card-item span{
+    font-size: 13px;
+    padding-left: 10px;
+    color: var(--text-color);
+}
+
+/* Cards*/
+
+/* Choose*/
+.choose .container {
+    flex-wrap: nowrap;
+}
+.choose .text {
+    text-align: center;
+} 
+.choose .text h3 {
+    font-size: 30px;
+}
+.choose p {
+    color: var(--text-color);
+    font-size: 13px;
+}
+/*Choose*/
+
+/* Courses */
+.courses .cards > div > div{
+    background-color: var(--alt-color);
+}
+.courses h3 {
+    font-size: 18px;
+}
+.courses p {
+    font-size: 13px;
+    color: var(--text-color);
+
+    padding:0 10px 20px;
+}
+/* Courses */
+
+/* Experts */
+.experts .image {
+    height: 450px ;
+    display: flex;
+    background-color: red;
+}
+.experts .image img {
+    height: 450px ;
+    width: 100%;
+}
+.experts .cards > div > div {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.experts .cards .flow {
+    position: absolute;
+    top: 10px;
+    color: white;
+    transition: .4s;
+    transform: translateX(-50px);
+}
+.experts .cards > div > div:hover .flow {
+    transform: translateX(0);
+}
+.experts .cards .flow ul {
+    list-style: none;
+    padding-left: 10px;
+}
+.experts .cards .flow ul div {
+    background-color: var(--alt-color);
+    margin-bottom: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+/* Experts */
+
+/* Reviews*/
+.reviews .card {
+    background-color: var(--alt-color);
+    margin-bottom: 15px;
+}
+.reviews .card p {
+    color: var(--text-color);
+    line-height: 1.7;
+    padding: 15px;
+    font-size: 14px;
+}
+.reviews .card .person {
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+.reviews .card .person h4 {
+    font-size: 16px;
+}
+.reviews .card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.reviews .person i {
+    color: var(--main-color);
+    transform: translateY(-5px);
+}
+/* Reviews*/
+
+/* Contact Us */
+.contact img {
+    width: 400px;
+}
+.contact form {
+    color: var(--text-color);
+}
+.contact form .input label {
+    display: block;
+    font-size: 12px;
+    padding: 10px 0 5px;
+}
+.contact form .input input {
+    background-color: var(--alt-color);
+    border: 0;
+    padding: 5px;
+    color: white;
+    width: 300px;
+}
+.contact form input:focus {
+    outline: 0;
+}
+.contact form input::placeholder {
+    font-size: 12px;
+}
+.check {
+    padding: 20px 0;
+}
+.check p {
+    margin-bottom: 10px;
+}
+.check label {
+    font-size: 14px;
+}
+/* Contact Us */
+
+/* Footer */
+footer {
+    background-color: var(--alt-color);
+    padding: 30px 0;
+    margin-top: 70px;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+footer ul div {
+    background-color: var(--background-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+footer ul div:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+footer h3 {
+    color: var(--text-color);
+    font-size: 17px;
+    text-align: center;
+    padding-top: 10px;
+}
+footer span {
+    color: var(--main-color);
+}
+/* Footer */
